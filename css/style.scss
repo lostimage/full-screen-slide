@@ -1,0 +1,131 @@
+@import "_layout.scss";
+@import "_normalize.scss";
+@import "slick";
+body{
+
+}
+
+/* Layout */
+.ba-container{
+	padding-left: 20px;
+	padding-right: 20px;
+	max-width: 1200px;
+}
+
+/* Typography */
+a,
+input[type="submit"],
+input[type="button"],
+button{
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+input[type="submit"],
+input[type="button"],
+button,
+.ba-button{
+	display: inline-block;
+}
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover,
+.ba-button:hover{
+
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+
+}
+textarea {
+
+}
+$primary-color : #fff;
+.ba-slider {
+	&__slide {
+		color: $primary-color;
+		background: 50%;
+		background-size: cover;
+			.ba-container {
+				padding: 100px 0 ;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				min-height: 100vh;
+			}
+	}
+
+}
+.slick-next, .slick-prev {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	fill: $primary-color;
+	height: 62px;
+	width: 30px;
+	cursor: pointer;
+	z-index: 3;
+	 &:hover {
+		 fill: #111;
+	 }
+}
+.slick-next {
+	right: 5%;
+}
+.slick-prev {
+	left: 5%;
+}
+.slick-dots {
+	position:absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 100px;
+	margin: 20px 0 0 ;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	li {
+		padding: 0 5px;
+	}
+	button {
+		display: inline-block;
+		padding: 0;
+		background:none;
+		border: none;
+		text-indent: -999px;
+		overflow: hidden;
+		width: 20px;
+		height: 20px;
+		border: 2px solid $primary-color;
+		border-radius:50%;
+		&:hover ,&:active {
+			border-color: #000;
+			outline: none;
+		}
+
+	}
+	.slick-active {
+		button {
+			background-color:$primary-color;
+		}
+	}
+}
+.ba-hide {
+	display: none;
+}
+
